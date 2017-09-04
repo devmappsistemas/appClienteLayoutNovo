@@ -1,0 +1,2 @@
+Apos gerar keystore usa esse comando para visualiza sha1
+keytool -list -v -keystore  chave.jks

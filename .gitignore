@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.gradle/
+.idea/workspace.xml
+app/build/
+appClienteAndroidStudio.iml
+build/

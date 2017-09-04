@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "630156754360",
+    "firebase_url": "https://viarestritaex.firebaseio.com",
+    "project_id": "viarestritaex",
+    "storage_bucket": "viarestritaex.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630156754360:android:85e355471dcf1b95",
+        "android_client_info": {
+          "package_name": "com.viarestritaex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630156754360-rcbm3m4c90am3tq58isvlj11j2grrb3d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.viarestritaex",
+            "certificate_hash": "199903807572ba07ab010f54c798d5b2df765e7a"
+          }
+        },
+        {
+          "client_id": "630156754360-fv84i8am5dl6b8596cnlv6j9kld5m0j7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBW89GCTkOMroxNuDZ07djR4ETyOtvG70Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630156754360-fv84i8am5dl6b8596cnlv6j9kld5m0j7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

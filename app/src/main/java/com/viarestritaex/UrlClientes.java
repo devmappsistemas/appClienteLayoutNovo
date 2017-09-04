@@ -9,7 +9,7 @@ public class UrlClientes {
     /**
      * viarestritaex
      */
-    public static String url = "http://viarestritaex.com.br/";
+    //public static String url = "http://viarestritaex.com.br/";
     /**
      * spartanmotoboys
      */
@@ -39,6 +39,11 @@ public class UrlClientes {
      * heldtransportes
      */
     //public static String url = "http://heldtransportes.com/";
+
+    /**
+     * mototaxionline
+     */
+    public static String url = "http://mototaxionline.com/";
 
 
 
