@@ -50,7 +50,9 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
         String appMame = getResources().getString(R.string.app_name);
         this.errorMSgInternet ="App "+appMame+" requer conexão com a Internet";
 
-
+/**
+ * teset git
+ */
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
