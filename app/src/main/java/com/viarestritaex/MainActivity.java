@@ -18,11 +18,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
-
-
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity  implements LocationListener{
@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
         browser.getSettings().setBuiltInZoomControls(true);
         browser.getSettings().setSupportZoom(true);
         browser.getSettings().setDisplayZoomControls(false);
+        browser.addJavascriptInterface(this, "chaveMain");
         progress = findViewById(R.id.progress);
         progress.setVisibility(View.INVISIBLE);
 
@@ -120,6 +121,25 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
     }
 
 
+    @JavascriptInterface
+    public void carregarTelaChamarMototaxi() {
+
+
+
+        Log.d(TAG, "vai carregar tela chamar mototaxi");
+
+
+    }
+
+    @JavascriptInterface
+    public void sair() {
+
+        Log.d(TAG, " apertou botão sair");
+
+        Toast.makeText(getApplicationContext(),"Até breve...",Toast.LENGTH_LONG).show();
+
+        finish();
+    }
 
     @Override
     protected void onStop(){
@@ -140,7 +160,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
 
         refreshedToken = getApplicationContext().getSharedPreferences(myPrefsName, MODE_PRIVATE).getString("registroId","0");
 
-        url = ulrCliente+"mobilePrincipal.php?andStudio=S&destino=MN&mobile=A&registreId="+refreshedToken+"&versaoApp="+ConfiguracaoCliente.versaoApp+"AS&la=&lo=";
+        url = ulrCliente+"mobilePrincipal.php?andStudio=S&destino=MN&mobile=A&registreId="+refreshedToken+"&versaoApp="+ConfiguracaoCliente.versaoApp+"AS&la=&lo=&cpAndroid=A";
         //UrlClientes = "http://mototaxionline.com/mobilePrincipal.php?destino=MN&versao="+ConfiguracaoCliente.versaoApp+"&la=&lo=";
         return url;
     }
@@ -151,7 +171,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
 
         refreshedToken = getApplicationContext().getSharedPreferences(myPrefsName, MODE_PRIVATE).getString("registroId","0");
 
-        url = ulrCliente+"mobilePrincipal.php?andStudio=S&destino=MN&mobile=A&registreId="+refreshedToken+"&versaoApp="+ConfiguracaoCliente.versaoApp+"AS&la="+latitude+"&lo="+longitude;
+        url = ulrCliente+"mobilePrincipal.php?andStudio=S&destino=MN&mobile=A&registreId="+refreshedToken+"&versaoApp="+ConfiguracaoCliente.versaoApp+"AS&la="+latitude+"&lo="+longitude+"&cpAndroid=A";
         //UrlClientes = "http://mototaxionline.com/mobilePrincipal.php?destino=MN&versao="+ConfiguracaoCliente.versaoApp+"&la="+latitude+"&lo="+longitude;
         return url;
     }

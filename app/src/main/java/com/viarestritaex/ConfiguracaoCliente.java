@@ -6,6 +6,6 @@ package com.viarestritaex;
 public class ConfiguracaoCliente {
 
     public static String nomeCliente = "viarestritaex";
-    public static String versaoApp = "2.6";
+    public static String versaoApp = "3.0";
 
 }
