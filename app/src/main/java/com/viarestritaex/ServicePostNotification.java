@@ -45,7 +45,7 @@ public class ServicePostNotification extends IntentService {
         actionNotification  = intent.getStringExtra("actionNotification");
 
 
-        //Log.i (TAG,  "Metodo onHandleIntent()  ServicePostNotification paramts"+idMsgMotoboy+"--"+actionNotification+"--"+notificationUrl);
+        Log.i (TAG,  "Metodo onHandleIntent()  ServicePostNotification paramts "+idMensagem+"--"+actionNotification+"--"+notificationUrl);
 
         String refreshedToken = getApplicationContext().getSharedPreferences(myPrefsName, MODE_PRIVATE).getString("registroId","0");
         HashMap<String,String> postParams = new HashMap<String, String>();
@@ -81,7 +81,7 @@ public class ServicePostNotification extends IntentService {
                 conn.setReadTimeout(15000);
                 conn.setConnectTimeout(15000);
                 conn.setRequestMethod("POST");
-                //conn.setDoInput(true);
+                conn.setDoInput(true);
                 conn.setDoOutput(true);
 
 
@@ -104,6 +104,14 @@ public class ServicePostNotification extends IntentService {
 
             } catch (IOException e) {
                 Log.i(TAG, "ServicePostNotification - postNotification() IOException - " + e.getMessage());
+
+                Intent it = new Intent(getApplicationContext(),BroadcastPostService.class);
+                it.putExtra("idMensagem",idMensagem);
+                it.putExtra("notificationUrl",notificationUrl);
+                it.putExtra("actionNotification",actionNotification);
+
+                AlarmUtil.schedule(getApplicationContext(),it,INTERVAL_TWO_MINUTES);
+
             }
 
         }else{
