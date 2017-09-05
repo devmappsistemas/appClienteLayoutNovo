@@ -6,10 +6,10 @@ android {
 
     defaultConfig {
         applicationId "com.viarestritaex"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 25
-        versionCode 11
-        versionName "2.6"
+        versionCode 12
+        versionName "3.0"
     }
     buildTypes {
         release {

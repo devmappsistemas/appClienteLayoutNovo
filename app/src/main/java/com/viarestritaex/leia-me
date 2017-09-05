@@ -3,4 +3,8 @@ Firebase: https://console.firebase.google.com/u/0/?gclid=EAIaIQobChMI8O7dp_qN1gI
 email: mappsistemas@gmail.com
 senha: will3077
 
+ver sha1
+keytool -list -v -keystore D:\keystones\notificacaopush.keystore
 
+link gerar imagens
+https://romannurik.github.io/AndroidAssetStudio/index.html

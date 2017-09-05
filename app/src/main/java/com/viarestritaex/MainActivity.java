@@ -141,6 +141,17 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
         finish();
     }
 
+    @JavascriptInterface
+    public void abrirCompartilhamento(String titulo, String mensagem, String auxiliar) {
+
+        Intent shareIntent = new Intent(android.content.Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, titulo);
+        shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, mensagem);
+        startActivity(Intent.createChooser(shareIntent, titulo));
+
+    }
+
     @Override
     protected void onStop(){
         super.onStop();
