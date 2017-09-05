@@ -83,6 +83,7 @@ public class ServicePostNotification extends IntentService {
                 conn.setRequestMethod("POST");
                 conn.setDoInput(true);
                 conn.setDoOutput(true);
+                conn.setChunkedStreamingMode(0);
 
 
                 OutputStream os = conn.getOutputStream();
@@ -103,6 +104,7 @@ public class ServicePostNotification extends IntentService {
                 }
 
             } catch (IOException e) {
+
                 Log.i(TAG, "ServicePostNotification - postNotification() IOException - " + e.getMessage());
 
                 Intent it = new Intent(getApplicationContext(),BroadcastPostService.class);
@@ -112,6 +114,9 @@ public class ServicePostNotification extends IntentService {
 
                 AlarmUtil.schedule(getApplicationContext(),it,INTERVAL_TWO_MINUTES);
 
+            }finally {
+                Log.i(TAG, "ServicePostNotification - postNotification() finally  ");
+                conn.disconnect();
             }
 
         }else{
