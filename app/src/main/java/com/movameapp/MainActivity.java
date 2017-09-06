@@ -24,6 +24,9 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.facebook.appevents.AppEventsConstants;
+import com.facebook.appevents.AppEventsLogger;
+
 
 public class MainActivity extends AppCompatActivity  implements LocationListener{
 
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
     private ImageView iconeCliente;
     private String refreshedToken = "0";
     private String myPrefsName = "configAppCliente";
+    private AppEventsLogger logger;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,13 +50,13 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
 
         Log.i (TAG,  "Metodo onCreate Inicializado");
 
+        logger = AppEventsLogger.newLogger(this);
+
         setContentView(R.layout.activity_webview);
         String appMame = getResources().getString(R.string.app_name);
         this.errorMSgInternet ="App "+appMame+" requer conexão com a Internet";
 
-/**
- * teset git
- */
+
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
@@ -150,6 +154,11 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
         shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, mensagem);
         startActivity(Intent.createChooser(shareIntent, titulo));
 
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        logger.logEvent(AppEventsConstants.EVENT_NAME_ACTIVATED_APP);
     }
 
     @Override
