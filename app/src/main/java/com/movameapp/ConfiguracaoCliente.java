@@ -1,4 +1,4 @@
-package com.viarestritaex;
+package com.movameapp;
 
 /**
  * Created by DEV on 10/08/2016.

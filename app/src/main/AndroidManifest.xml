@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.viarestritaex">
+    package="com.movameapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -10,13 +10,13 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name=".SimpleApplication"
+        android:name="com.movameapp.SimpleApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.movameapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,26 +24,26 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".MyFirebaseInstanceIDService">
+        <service android:name="com.movameapp.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".MyFirebaseMessagingService">
+        <service android:name="com.movameapp.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
         <receiver
-            android:name=".BroadcastPostService"
+            android:name="com.movameapp.BroadcastPostService"
             android:enabled="true"
             android:exported="true" >
                 <action android:name="POST_NOTIFICATION_SERVICE" />
         </receiver>
 
         <service
-            android:name=".ServicePostNotification"
+            android:name="com.movameapp.ServicePostNotification"
             android:exported="false"></service>
     </application>
 

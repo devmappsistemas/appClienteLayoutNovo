@@ -1,10 +1,9 @@
-package com.viarestritaex;
+package com.movameapp;
 
 import android.app.IntentService;
 import android.content.Intent;
 import android.content.Context;
 import android.net.ConnectivityManager;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import java.io.BufferedWriter;

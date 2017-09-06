@@ -1,4 +1,4 @@
-package com.viarestritaex;
+package com.movameapp;
 
 /**
  * Created by User on 25/08/2017.
@@ -7,9 +7,9 @@ package com.viarestritaex;
 public class UrlClientes {
 
     /**
-     * viarestritaex
+     * url cliente
      */
-    public static String url = "http://viarestritaex.com.br/";
+    public static String url = "http://movameapp.com.br/";
 
 
 

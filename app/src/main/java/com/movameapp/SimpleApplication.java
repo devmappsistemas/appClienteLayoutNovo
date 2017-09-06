@@ -1,37 +1,25 @@
-package com.viarestritaex;
+package com.movameapp;
 
+import android.app.Application;
 import android.content.SharedPreferences;
-import android.util.Log;
-
 
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.FirebaseInstanceIdService;
-
-
 
 /**
- * Created by DEV on 29/08/2017.
+ * Created by DEV on 30/08/2017.
  */
 
-public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
+public class SimpleApplication extends Application {
 
-
-
-    private static final String TAG = "APP_MAPP";
-
-
-    public void onTokenRefresh() {
-
-
-        super.onTokenRefresh();
-        // Get updated InstanceID token.
-        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
-
+    @Override
+    public void onCreate() {
+        super.onCreate();
 
         String myPrefsName = "configAppCliente";
 
         if(!getApplicationContext().getSharedPreferences(myPrefsName, MODE_PRIVATE).getBoolean("install",false)){
 
+            String refreshedToken = FirebaseInstanceId.getInstance().getToken();
 
             SharedPreferences.Editor editor = getSharedPreferences(myPrefsName, MODE_PRIVATE).edit();
             if(refreshedToken!=null){
@@ -44,12 +32,5 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
                 editor.apply();
             }
         }
-
-
-        Log.v(TAG, "Refreshed token: " + refreshedToken);
-
-
-
-
     }
 }

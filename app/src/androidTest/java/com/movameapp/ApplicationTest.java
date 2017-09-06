@@ -1,4 +1,4 @@
-package com.viarestritaex;
+package com.movameapp;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

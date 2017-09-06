@@ -4,7 +4,8 @@ email: mappsistemas@gmail.com
 senha: will3077
 
 ver sha1
-keytool -list -v -keystore D:\keystones\notificacaopush.keystore
+keytool -list -v -keystore F:\chave.keystore
+
 
 link gerar imagens
 https://romannurik.github.io/AndroidAssetStudio/index.html
