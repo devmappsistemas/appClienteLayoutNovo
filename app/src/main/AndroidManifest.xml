@@ -16,14 +16,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
         <activity android:name="com.movameapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <service android:name="com.movameapp.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
@@ -34,17 +34,16 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
         <receiver
             android:name="com.movameapp.BroadcastPostService"
             android:enabled="true"
             android:exported="true" >
                 <action android:name="POST_NOTIFICATION_SERVICE" />
         </receiver>
-
         <service
             android:name="com.movameapp.ServicePostNotification"
-            android:exported="false"></service>
+            android:exported="false">
+        </service>
     </application>
 
 </manifest>
