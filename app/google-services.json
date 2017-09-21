@@ -1,5 +1,4 @@
-{
-  "project_info": {
+{  "project_info": {
     "project_number": "642585929864",
     "firebase_url": "https://entregas-1351.firebaseio.com",
     "project_id": "entregas-1351",
@@ -42,6 +41,13 @@
         "appinvite_service": {
           "status": 2,
           "other_platform_oauth_client": [
+            {
+              "client_id": "642585929864-4hbdo9dc0grirf3k5fde52v3ovmfp0t0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.expresso-jonas-boy"
+              }
+            },
             {
               "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
               "client_type": 3
@@ -90,6 +96,13 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
+              "client_id": "642585929864-4hbdo9dc0grirf3k5fde52v3ovmfp0t0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.expresso-jonas-boy"
+              }
+            },
+            {
               "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
               "client_type": 3
             }
@@ -136,6 +149,13 @@
         "appinvite_service": {
           "status": 2,
           "other_platform_oauth_client": [
+            {
+              "client_id": "642585929864-4hbdo9dc0grirf3k5fde52v3ovmfp0t0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.expresso-jonas-boy"
+              }
+            },
             {
               "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
               "client_type": 3
@@ -184,6 +204,13 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
+              "client_id": "642585929864-4hbdo9dc0grirf3k5fde52v3ovmfp0t0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.expresso-jonas-boy"
+              }
+            },
+            {
               "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
               "client_type": 3
             }
@@ -231,6 +258,13 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
+              "client_id": "642585929864-4hbdo9dc0grirf3k5fde52v3ovmfp0t0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.expresso-jonas-boy"
+              }
+            },
+            {
               "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
               "client_type": 3
             }
@@ -246,6 +280,40 @@
         "mobilesdk_app_id": "1:642585929864:android:9d5d97e47537f895",
         "android_client_info": {
           "package_name": "com.movameapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:728191b9db03185e",
+        "android_client_info": {
+          "package_name": "com.zipmarvlog"
         }
       },
       "oauth_client": [
