@@ -1,4 +1,4 @@
-package com.movameapp;
+package com.zipmarvlog;
 
 import android.app.Notification;
 import android.app.PendingIntent;

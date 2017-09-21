@@ -1,4 +1,4 @@
-package com.movameapp;
+package com.zipmarvlog;
 
 /**
  * Created by DEV on 10/08/2016.

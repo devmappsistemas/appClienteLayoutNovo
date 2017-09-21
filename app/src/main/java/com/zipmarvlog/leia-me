@@ -17,6 +17,6 @@ Criar App Facebook Developer
 3 - Class SimpleAplication  adicionar ou comentar -> AppEventsLogger.activateApp(this) - linha 39
 4 - Class MainActivity adicionar ou comentar ->logger = AppEventsLogger.newLogger(this) - linha 53 e 161
 
-Gera codigo Hashes chave - Facebook
+Gera codigo Hashes chave - Facebook o codigo abaixo é do movame
 keytool -exportcert -alias MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzF0WwTXbn4HUfZKHSABq1QEthlRiRqBLDNdpPbXt+nzFiZmCyRJyvrBsZNvVsL82XtXhfVX6IgREUhK99jbl6AAmy/Dyv9c+5eYI8Dj/TPaYkusJaqzOb7YnLQC1oIiIAR5d6sxKOR2S//1SznMG9MKtJcr+VbEA2tDs4Uhsi58NUWGleF4T20kWijsl7KXR1s8XfN7Vra2YQFN1ToxvMCQQ6OItzjImeWKLacYqKpCUP4K4KN3vo1+J19MHxwekzwbNz/d5LGpDbWEdTgSVoMQNHJCOQQxXioYU3IAvr2iOEGzeKdF4ohDqkZ4LVl90sjf02teyXVhs+jEc+sZCVwIDAQAB -keystore D:\keystones\chave.keystore | openssl sha1 -binary | openssl base64
 ----------------------------------------------------------------------------------------------------

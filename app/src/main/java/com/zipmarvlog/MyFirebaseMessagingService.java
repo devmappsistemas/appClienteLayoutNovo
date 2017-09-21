@@ -1,4 +1,4 @@
-package com.movameapp;
+package com.zipmarvlog;
 
 import android.content.Intent;
 import android.util.Log;

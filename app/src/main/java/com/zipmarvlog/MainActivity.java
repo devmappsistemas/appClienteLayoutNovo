@@ -1,4 +1,4 @@
-package com.movameapp;
+package com.zipmarvlog;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -446,12 +446,12 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
                     case -2:
                         Log.i (TAG,  "Metodo onReceivedError - MyBrowser (Servidor ou o nome do proxy de pesquisa falhou) : errorCode"+errorCode);
 
-                        dialogoErrorInternet("Servidor ou o nome do proxy de pesquisa falhou! Favor reniciar Aplicativo novamente");
+                        dialogoErrorInternet("Desculpe houve algum erro em sua rede, favor refazer");
                         break;
                     case -6:
                         Log.i (TAG,  "Metodo onReceivedError - MyBrowser (Falhou ao conectar com o servidor) : errorCode"+errorCode);
 
-                        dialogoErrorInternet("Falhou ao conectar com o servidor! Favor reniciar Aplicativo novamente ");
+                        dialogoErrorInternet("Falhou ao conectar! Favor reniciar Aplicativo novamente ");
                         break;
                     case -8:
                         Log.i (TAG,  "Metodo onReceivedError - MyBrowser (Conexão expirou) : errorCode"+errorCode);
