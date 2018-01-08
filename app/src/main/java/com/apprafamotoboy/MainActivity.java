@@ -1,3 +1,4 @@
+
 package com.apprafamotoboy;
 
 import android.Manifest;
@@ -8,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
     private String idCliente = "";
     private String myPrefsName = "configAppCliente";
     private AppEventsLogger logger;
+    private Criteria criteria;
+    private String provider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -304,13 +308,23 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
             try
             {
                 Log.i (TAG,  "GPS Ativado");
-                locationManager.requestLocationUpdates( LocationManager.GPS_PROVIDER,
-                        0,
-                        0, this);
-                Location lastLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
-                if(lastLocation==null){
+                criteria = new Criteria();
 
+                criteria.setAccuracy(Criteria.ACCURACY_FINE);
+                criteria.setAltitudeRequired(false);
+                criteria.setBearingRequired(false);
+                criteria.setCostAllowed(true);
+                criteria.setPowerRequirement(Criteria.POWER_LOW);
+
+                provider = locationManager.getBestProvider(criteria, true);
+
+
+
+
+
+                if(provider != null) {
+                    locationManager.requestLocationUpdates(provider, 2 * 60 * 1000, 10, this);
                     startWebView();
                 }
 
@@ -424,10 +438,18 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
     public void onLocationChanged(Location location) {
 
         Log.i (TAG,  "Metodo onLocationChanged inicializado");
-        startWebView(location.getLatitude(),location.getLongitude());
+        //startWebView(location.getLatitude(),location.getLongitude());
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+            browser.evaluateJavascript("removePontoMapaNovo(1);pegarEnderecoPelaLaLoMobileNovo("+location.getLatitude()+","+location.getLongitude()+");",null);
+        }else{
+            browser.loadUrl("javascript:removePontoMapaNovo(1);pegarEnderecoPelaLaLoMobileNovo("+location.getLatitude()+","+location.getLongitude()+");");
+        }
 
         try
         {
+
+
             locationManager.removeUpdates(this);
 
         }catch (SecurityException ex){
