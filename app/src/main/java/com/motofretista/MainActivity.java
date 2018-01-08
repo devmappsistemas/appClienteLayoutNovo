@@ -1,4 +1,4 @@
-package com.motofretista;
+package com.apprafamotoboy;
 
 import android.Manifest;
 import android.app.AlertDialog;
