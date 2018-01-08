@@ -1,4 +1,4 @@
-package com.apprafamotoboy;
+package com.motofretista;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
