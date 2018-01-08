@@ -42,10 +42,10 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "642585929864-4hbdo9dc0grirf3k5fde52v3ovmfp0t0.apps.googleusercontent.com",
+              "client_id": "642585929864-9c4kfn7ccjg86ebieks9duc7j152hgqg.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.expresso-jonas-boy"
+                "bundle_id": "com.motoboywv"
               }
             },
             {
@@ -96,10 +96,10 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "642585929864-4hbdo9dc0grirf3k5fde52v3ovmfp0t0.apps.googleusercontent.com",
+              "client_id": "642585929864-9c4kfn7ccjg86ebieks9duc7j152hgqg.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.expresso-jonas-boy"
+                "bundle_id": "com.motoboywv"
               }
             },
             {
@@ -150,10 +150,10 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "642585929864-4hbdo9dc0grirf3k5fde52v3ovmfp0t0.apps.googleusercontent.com",
+              "client_id": "642585929864-9c4kfn7ccjg86ebieks9duc7j152hgqg.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.expresso-jonas-boy"
+                "bundle_id": "com.motoboywv"
               }
             },
             {
@@ -204,10 +204,10 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "642585929864-4hbdo9dc0grirf3k5fde52v3ovmfp0t0.apps.googleusercontent.com",
+              "client_id": "642585929864-9c4kfn7ccjg86ebieks9duc7j152hgqg.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.expresso-jonas-boy"
+                "bundle_id": "com.motoboywv"
               }
             },
             {
@@ -258,10 +258,10 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "642585929864-4hbdo9dc0grirf3k5fde52v3ovmfp0t0.apps.googleusercontent.com",
+              "client_id": "642585929864-9c4kfn7ccjg86ebieks9duc7j152hgqg.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.expresso-jonas-boy"
+                "bundle_id": "com.motoboywv"
               }
             },
             {
@@ -314,6 +314,1196 @@
         "mobilesdk_app_id": "1:642585929864:android:728191b9db03185e",
         "android_client_info": {
           "package_name": "com.zipmarvlog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:194ccd6f28cfd107",
+        "android_client_info": {
+          "package_name": "com.ralogentregas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:82dfd00604486eff",
+        "android_client_info": {
+          "package_name": "com.mototaxial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:a96ad3df804d8446",
+        "android_client_info": {
+          "package_name": "com.mototeamexpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:826682069f96a97d",
+        "android_client_info": {
+          "package_name": "com.ligmototaxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:296f3db4b7ebe674",
+        "android_client_info": {
+          "package_name": "com.taximotoquale"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:13758799bd54f512",
+        "android_client_info": {
+          "package_name": "com.locallexpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:cdac6587bcb6cecb",
+        "android_client_info": {
+          "package_name": "com.brasoncoop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:936c1c197af57715",
+        "android_client_info": {
+          "package_name": "com.levvo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:12ad1667b889c89f",
+        "android_client_info": {
+          "package_name": "com.motoboybhonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:657779347e39f93a",
+        "android_client_info": {
+          "package_name": "br.com.off2.liboff2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:140a7cdac5381ea1",
+        "android_client_info": {
+          "package_name": "com.motoboyfoco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:c82943beab0fa766",
+        "android_client_info": {
+          "package_name": "com.santafacilidade"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:92471dc13692f570",
+        "android_client_info": {
+          "package_name": "com.lrtransportesexpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:e4d2a7890b07e898",
+        "android_client_info": {
+          "package_name": "com.motoboywv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:0c0e8d66718e669d",
+        "android_client_info": {
+          "package_name": "com.expressoboys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:f4376b4be8ee15ca",
+        "android_client_info": {
+          "package_name": "com.boyvinyentregas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:17897c0d1a4b0e13",
+        "android_client_info": {
+          "package_name": "com.zoomentregas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:05149fe1141f672f",
+        "android_client_info": {
+          "package_name": "com.torrescourier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:b3debd2ec35ff8ab",
+        "android_client_info": {
+          "package_name": "com.boyzum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:af0b02e06465c362",
+        "android_client_info": {
+          "package_name": "com.bitlogg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:43017d453fc86fcf",
+        "android_client_info": {
+          "package_name": "com.objetivaexpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:06e32ea4f2449bb1",
+        "android_client_info": {
+          "package_name": "com.helpmotoboys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:2867be4339c8c3ea",
+        "android_client_info": {
+          "package_name": "com.araulogapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:b788ed372501ef7d",
+        "android_client_info": {
+          "package_name": "com.motofreterastreado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:aaa47c134333859f",
+        "android_client_info": {
+          "package_name": "com.fastmensageiros"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:f50e1146e1f77e95",
+        "android_client_info": {
+          "package_name": "com.domacientregas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:feefdb35bc543c73",
+        "android_client_info": {
+          "package_name": "com.estrelaexpressllog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:6a14981d754e1a57",
+        "android_client_info": {
+          "package_name": "com.adrexpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:5240bd8fc305fa93",
+        "android_client_info": {
+          "package_name": "com.viamoto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:558d0612fdb3cd80",
+        "android_client_info": {
+          "package_name": "com.agillizaloggy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:83eaaaa6894d6b46",
+        "android_client_info": {
+          "package_name": "com.mototaxifox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:7bbcd6589c0579e7",
+        "android_client_info": {
+          "package_name": "com.apprafamotoboy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:8fcc56c23fd687dd",
+        "android_client_info": {
+          "package_name": "com.zaras"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:c218dd56310e1214",
+        "android_client_info": {
+          "package_name": "com.fastmotoboyrio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:21b5b48bdb7c95a9",
+        "android_client_info": {
+          "package_name": "com.jet"
         }
       },
       "oauth_client": [

@@ -7,11 +7,11 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.zipmarvlog.MainActivity">
+    tools:context="com.apprafamotoboy.MainActivity">
 
     <WebView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/webView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
