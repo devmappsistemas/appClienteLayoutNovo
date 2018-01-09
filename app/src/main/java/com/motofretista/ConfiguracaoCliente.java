@@ -1,4 +1,4 @@
-package com.apprafamotoboy;
+package com.motofretista;
 
 /**
  * Created by DEV on 10/08/2016.
