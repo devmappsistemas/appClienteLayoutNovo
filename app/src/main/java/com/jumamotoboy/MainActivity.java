@@ -1,6 +1,7 @@
 package com.jumamotoboy;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -30,7 +31,7 @@ import android.widget.Toast;
 //import com.facebook.appevents.AppEventsLogger;
 
 
-public class MainActivity extends AppCompatActivity  implements LocationListener{
+public class MainActivity extends AppCompatActivity {
 
 
     private WebView browser;
@@ -43,11 +44,12 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
     private String refreshedToken = "0";
     private String idCliente = "";
     private String myPrefsName = "configAppCliente";
+    //private AppEventsLogger logger;
     private Criteria criteria;
     private String provider;
-   // private AppEventsLogger logger;
-    private Double la;
-    private Double lo;
+    private double latitude;
+    private double longitude;
+    private GoogleLocation googleLocation;;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -232,6 +234,18 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
     protected void onResume() {
         super.onResume();
         //logger.logEvent(AppEventsConstants.EVENT_NAME_ACTIVATED_APP);
+        if(googleLocation != null){
+            googleLocation.startLocationUpdates();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(googleLocation != null){
+            googleLocation.stopLocationUpdates();
+        }
+
     }
 
     @Override
@@ -330,34 +344,9 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
         {
             progress.setVisibility(View.VISIBLE);
             iconeCliente.setVisibility(View.VISIBLE);
-            try
-            {
-                Log.i (TAG,  "GPS Ativado");
 
-                criteria = new Criteria();
-
-                criteria.setAccuracy(Criteria.ACCURACY_FINE);
-                criteria.setAltitudeRequired(false);
-                criteria.setBearingRequired(false);
-                criteria.setCostAllowed(true);
-                criteria.setPowerRequirement(Criteria.POWER_LOW);
-
-                provider = locationManager.getBestProvider(criteria, true);
-
-
-
-
-
-                if(provider != null) {
-                    Log.i (TAG,  "Provider Ativo");
-                    locationManager.requestLocationUpdates(provider, 2 * 60 * 1000, 10, this);
-                    startWebView();
-                }
-
-            }catch (SecurityException ex)
-            {
-                Log.i (TAG,  "Error na hora de solicitar coordenadas GPS");
-            }
+            updateLocation(getApplicationContext(),this);
+            startWebView();
         }
     }
 
@@ -460,50 +449,34 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
     }
 
 
-    @Override
-    public void onLocationChanged(Location location) {
+    //obter a localização atual do usuário
+    private void updateLocation(Context context, Activity activity) {
 
-        Log.i (TAG,  "Metodo onLocationChanged inicializado");
-        //startWebView(location.getLatitude(),location.getLongitude());
+        googleLocation = new GoogleLocation(context, activity, new LocationUpdateListener() {
 
-        la = location.getLatitude();
-        lo = location.getLongitude();
+            @Override
+            public void updateLocation(Location location) {
 
+                if(location != null){
+                    Log.i (TAG,  "updateLocation LA"+location.getLatitude()+" LO"+location.getLongitude());
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-            browser.evaluateJavascript("removePontoMapaNovo(1);pegarEnderecoPelaLaLoMobileNovo("+location.getLatitude()+","+location.getLongitude()+");",null);
-        }else{
-            browser.loadUrl("javascript:removePontoMapaNovo(1);pegarEnderecoPelaLaLoMobileNovo("+location.getLatitude()+","+location.getLongitude()+");");
-        }
+                    latitude = location.getLatitude();
+                    longitude = location.getLongitude();
+                }
+            }
 
+            @Override
+            public void lastLocation(Location location) {
 
-        try
-        {
+                if(location != null){
+                    Log.i (TAG,  "lastLocation LA"+location.getLatitude()+" LO"+location.getLongitude());
 
+                    latitude = location.getLatitude();
+                    longitude = location.getLongitude();
+                }
+            }
+        });
 
-            locationManager.removeUpdates(this);
-
-        }catch (SecurityException ex){
-            Log.i (TAG,  "Error ao remover LocationManager ");
-        }
-
-    }
-
-    @Override
-    public void onStatusChanged(String s, int i, Bundle bundle) {
-
-        Log.i (TAG,  "Metodo onStatusChanged inicializado");
-
-    }
-
-    @Override
-    public void onProviderEnabled(String s) {
-        Log.i (TAG,  "Metodo onProviderEnabled inicializado");
-    }
-
-    @Override
-    public void onProviderDisabled(String s) {
-        Log.i (TAG,  "Metodo onProviderDisabled inicializado");
     }
 
 
@@ -531,8 +504,24 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
         @Override
         public void onPageFinished(WebView view, String url) {
 
+            super.onPageFinished(view, url);
             progress.setVisibility(View.INVISIBLE);
             iconeCliente.setVisibility(View.INVISIBLE);
+
+
+            if(latitude != 0 && longitude != 0 ){
+
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+
+                    browser.evaluateJavascript("javascript:removePontoMapaNovo(1);pegarEnderecoPelaLaLoMobileNovo("+latitude+","+longitude+");",null);
+                }
+                else
+                {
+                    browser.loadUrl("javascript:removePontoMapaNovo(1);pegarEnderecoPelaLaLoMobileNovo("+latitude+","+longitude+");");
+                }
+            }
+
+
         }
 
         @Override
