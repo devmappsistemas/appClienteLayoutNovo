@@ -1,5 +1,4 @@
-{
-  "project_info": {
+{  "project_info": {
     "project_number": "642585929864",
     "firebase_url": "https://entregas-1351.firebaseio.com",
     "project_id": "entregas-1351",
@@ -1539,6 +1538,74 @@
         "mobilesdk_app_id": "1:642585929864:android:261cf01d40ca6f66",
         "android_client_info": {
           "package_name": "com.motofretista"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:f2bb96d65063cbe2",
+        "android_client_info": {
+          "package_name": "com.entregasapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642585929864-0ejclmb3evbm1v4ngmkl909f47hdk4o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkw6uhh9xzNztaIBsA4S8ErPkbiwJL8s"
+        },
+        {
+          "current_key": "AIzaSyBNpNqpXxqF5fX4vwheKTVSlpG8E9qEEoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642585929864:android:4485f4c57ae51398",
+        "android_client_info": {
+          "package_name": "com.jumamotoboy"
         }
       },
       "oauth_client": [
