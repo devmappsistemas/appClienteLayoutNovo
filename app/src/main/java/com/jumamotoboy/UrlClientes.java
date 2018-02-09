@@ -9,7 +9,11 @@ public class UrlClientes {
     /**
      * url cliente
      */
-    public static String url = "http://www.jumamotoboy.com.br/";
+    //public static String url = "http://www.jumamotoboy.com.br/";
+    //public static String url = " http://motovupt.tecnologia.ws";
+    public static String url = " http://mototaxionline.servicos.ws/";
+
+
 
 
 

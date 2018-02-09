@@ -14,6 +14,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
+import android.net.Uri;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -21,11 +22,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.ConsoleMessage;
 import android.webkit.JavascriptInterface;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.util.HashMap;
+import java.util.Map;
 
 //import com.facebook.appevents.AppEventsConstants;
 //import com.facebook.appevents.AppEventsLogger;
@@ -49,7 +55,11 @@ public class MainActivity extends AppCompatActivity {
     private String provider;
     private double latitude;
     private double longitude;
-    private GoogleLocation googleLocation;;
+    private GoogleLocation googleLocation;
+    private Map<String, String> parameters = null;
+    private boolean firstStart = true;
+    private AlertDialog alertDialog = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,11 +89,19 @@ public class MainActivity extends AppCompatActivity {
         browser.getSettings().setSupportZoom(true);
         browser.getSettings().setDisplayZoomControls(false);
         browser.addJavascriptInterface(this, "chaveMain");
+        browser.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
+                android.util.Log.d(TAG, consoleMessage.message());
+                return true;
+            }
+        });
+
         progress = findViewById(R.id.progress);
-        progress.setVisibility(View.INVISIBLE);
+        //progress.setVisibility(View.INVISIBLE);
 
         iconeCliente = (ImageView) findViewById(R.id.icone_cliente);
-        iconeCliente.setVisibility(View.INVISIBLE);
+        //iconeCliente.setVisibility(View.INVISIBLE);
 
         //Caso tenha recebido notificacao push da alert aqui
         if(getIntent().getStringExtra("msgNotificacao") != null){
@@ -114,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
             startApp();
         }
         */
+
 
 
         // Se não possui permissão
@@ -230,6 +249,118 @@ public class MainActivity extends AppCompatActivity {
         startActivity(Intent.createChooser(shareIntent, titulo));
 
     }
+
+    @JavascriptInterface
+    public void createSharePreferencesUser(String nome,String email,String senha,String idSolicitante) {
+
+        SharedPreferences.Editor editor = getSharedPreferences(myPrefsName, MODE_PRIVATE).edit();
+        editor.putString("idCliente",idSolicitante);
+        //editor.putString("empresa",empresa);
+        editor.putString("email",email);
+        editor.putString("senha",senha);
+        editor.putString("nome",nome);
+        editor.apply();
+        /*
+        String msg = "Id :"+idSolicitante+" nome :"+nome+" email :"+email +" senha :  "+senha;
+        Toast.makeText(this,msg,Toast.LENGTH_LONG).show();
+        */
+
+    }
+    @JavascriptInterface
+    public void permissionLocation() {
+
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},0);
+
+        }else{
+
+            //Verifica de GPS esta Ativado ou Nao Ativado
+            boolean enabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+
+            if (!enabled)
+            {
+                Log.i (TAG,  "GPS Desativado");
+                dialogoPermissaoGps(false);
+            }
+        }
+
+    }
+
+    @JavascriptInterface
+    public void loginUserSession() {
+
+        SharedPreferences pref = getSharedPreferences(myPrefsName, this.MODE_PRIVATE);
+        String id = pref.getString("idCliente","");
+        String nome = pref.getString("nome","");
+        String email = pref.getString("email","");
+        String senha = pref.getString("senha","");
+
+
+
+        refreshedToken = pref.getString("registroId","0");
+
+        parameters =  new HashMap<String, String>();
+        parameters.put("andStudio","S");
+        parameters.put("destino","MN");
+        parameters.put("mobile","A");
+        parameters.put("registreId",refreshedToken);
+        parameters.put("versaoApp",ConfiguracaoCliente.versaoApp+"AS");
+        parameters.put("cpAndroid","A");
+
+        if(id != "" ){
+
+            parameters.put("idCliente",id);
+            // parameters.put("empresa",empresa);
+            parameters.put("nome",nome);
+            parameters.put("email",email);
+            parameters.put("senha",senha);
+
+
+
+        }
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
+            boolean enabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+
+            if (enabled)
+            {
+
+                parameters.put("la",String.valueOf(latitude));
+                parameters.put("lo",String.valueOf(longitude));
+
+                getUrl(latitude,longitude);
+            }
+
+        }else{
+
+            parameters.put("la","");
+            parameters.put("lo","");
+
+
+        }
+
+
+        Uri.Builder b = Uri.parse("").buildUpon();
+
+        for (Map.Entry<String, String> entry : parameters.entrySet()) {
+            b.appendQueryParameter(entry.getKey(), entry.getValue());
+        }
+
+        String urlFull = b.build().toString();
+
+
+        Log.i (TAG,  "Metodo loginUserSession()  "+urlFull);
+
+        new WebViewProxy().onGetWebViewJavasScript("javascript:redirectUserSession('"+nome+"','"+email+"','"+senha+"','"+id+"','"+urlFull+"');",browser);
+
+
+
+
+
+    }
     @Override
     protected void onResume() {
         super.onResume();
@@ -237,6 +368,8 @@ public class MainActivity extends AppCompatActivity {
         if(googleLocation != null){
             googleLocation.startLocationUpdates();
         }
+
+
     }
 
     @Override
@@ -244,6 +377,10 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         if(googleLocation != null){
             googleLocation.stopLocationUpdates();
+        }
+
+        if(alertDialog !=null){
+            alertDialog.dismiss();
         }
 
     }
@@ -260,39 +397,89 @@ public class MainActivity extends AppCompatActivity {
         //finish ();
     }
 
-    private String urlParametros(){
+    private void urlParametros(){
+
         String retorno = "";
+
+        SharedPreferences pref = getSharedPreferences(myPrefsName, this.MODE_PRIVATE);
+        String id = pref.getString("idCliente","");
+        //String empresa = pref.getString("empresa","");
+        String nome = pref.getString("nome","");
+        String email = pref.getString("email","");
+        String senha = pref.getString("senha","");
 
         refreshedToken = getApplicationContext().getSharedPreferences(myPrefsName, MODE_PRIVATE).getString("registroId","0");
 
-        retorno = "andStudio=S&destino=MN&mobile=A&registreId="+refreshedToken+"&versaoApp="+ConfiguracaoCliente.versaoApp+"AS&la=&lo=&cpAndroid=A";
+        parameters =  new HashMap<String, String>();
+        parameters.put("andStudio","S");
+        parameters.put("destino","MN");
+        parameters.put("mobile","A");
+        parameters.put("registreId",refreshedToken);
+        parameters.put("versaoApp",ConfiguracaoCliente.versaoApp+"AS");
+        parameters.put("cpAndroid","A");
 
-        return  retorno;
+        if(id != "" ){
+
+            parameters.put("idCliente",id);
+           // parameters.put("empresa",empresa);
+            parameters.put("nome",nome);
+            parameters.put("email",email);
+            parameters.put("senha",senha);
+
+
+
+        }
     }
 
     private String getUrl(){
 
         String ulrCliente = UrlClientes.url;
+        urlParametros();
 
-        url = ulrCliente+"mobilePrincipal.php?"+urlParametros()+"";
 
-        //url = ulrCliente+"mobilePrincipalNv.php?"+urlParametros()+"";
+        parameters.put("la","");
+        parameters.put("lo","");
 
-         //UrlClientes = "http://mototaxionline.com/mobilePrincipal.php?destino=MN&versao="+ConfiguracaoCliente.versaoApp+"&la=&lo=";
-        return url;
+
+        Uri.Builder b = Uri.parse(ulrCliente).buildUpon();
+        b.path("/mobilePrincipalNv.php");
+        //b.path("/mobilePrincipal.php");
+
+        for (Map.Entry<String, String> entry : parameters.entrySet()) {
+            b.appendQueryParameter(entry.getKey(), entry.getValue());
+        }
+
+        String urlFull = b.build().toString();
+        Log.i (TAG,  "Metodo getUrl() "+urlFull);
+
+        return  urlFull;
     }
 
     private String getUrl(double latitude, double longitude){
 
         String ulrCliente = UrlClientes.url;
 
-        url = ulrCliente+"mobilePrincipal.php?"+urlParametros()+"&la="+latitude+"&lo="+longitude+"";
+        urlParametros();
 
-       // url = ulrCliente+"mobilePrincipalNv.php?"+urlParametros()+"&la="+latitude+"&lo="+longitude+"";
+        parameters.put("la",String.valueOf(latitude));
+        parameters.put("lo",String.valueOf(longitude));
 
-        //UrlClientes = "http://mototaxionline.com/mobilePrincipal.php?destino=MN&versao="+ConfiguracaoCliente.versaoApp+"&la="+latitude+"&lo="+longitude;
-        return url;
+
+        Uri.Builder b = Uri.parse(ulrCliente).buildUpon();
+        b.path("/mobilePrincipalNv.php");
+        //b.path("/mobilePrincipal.php");
+
+        for (Map.Entry<String, String> entry : parameters.entrySet()) {
+            b.appendQueryParameter(entry.getKey(), entry.getValue());
+        }
+
+        String urlFull = b.build().toString();
+        Log.i (TAG,  "Metodo getUrl(latitude,longitude) "+urlFull);
+
+
+        return  urlFull;
     }
+
 
     private void startWebView(){
 
@@ -339,14 +526,14 @@ public class MainActivity extends AppCompatActivity {
         if (!enabled)
         {
             Log.i (TAG,  "GPS Desativado");
-            dialogoPermissaoGps();
+            dialogoPermissaoGps(true);
         }else
         {
-            progress.setVisibility(View.VISIBLE);
-            iconeCliente.setVisibility(View.VISIBLE);
+
 
             updateLocation(getApplicationContext(),this);
-            startWebView();
+            //startWebView();
+
         }
     }
 
@@ -363,7 +550,7 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    private void dialogoPermissaoGps(){
+    private void dialogoPermissaoGps(final boolean loadUrl){
 
         Log.i (TAG,  "Metodo dialogoPermissaoGps inicializado");
 
@@ -387,9 +574,19 @@ public class MainActivity extends AppCompatActivity {
 
             public void onClick(DialogInterface arg0, int arg1) {
 
-                progress.setVisibility(View.VISIBLE);
-                iconeCliente.setVisibility(View.VISIBLE);
-                startWebView();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+
+                        if(loadUrl){
+                            progress.setVisibility(View.VISIBLE);
+                            iconeCliente.setVisibility(View.VISIBLE);
+                            startWebView();
+                        }
+
+                    }
+                });
 
             }
 
@@ -397,6 +594,10 @@ public class MainActivity extends AppCompatActivity {
 
         builder.create();
         builder.show();
+
+        alertDialog = builder.create();
+
+
     }
 
     private void dialogoErrorInternet(String msg){
@@ -415,6 +616,7 @@ public class MainActivity extends AppCompatActivity {
             }
         } );
         builder.create();
+        alertDialog = builder.create();
         builder.show();
 
     }
@@ -435,6 +637,7 @@ public class MainActivity extends AppCompatActivity {
             }
         } );
         builder.create();
+        alertDialog = builder.create();
         builder.show();
 
     }
@@ -452,6 +655,7 @@ public class MainActivity extends AppCompatActivity {
     //obter a localização atual do usuário
     private void updateLocation(Context context, Activity activity) {
 
+
         googleLocation = new GoogleLocation(context, activity, new LocationUpdateListener() {
 
             @Override
@@ -462,6 +666,20 @@ public class MainActivity extends AppCompatActivity {
 
                     latitude = location.getLatitude();
                     longitude = location.getLongitude();
+
+                    if(firstStart){
+
+
+                        firstStart = false;
+
+                        progress.setVisibility(View.INVISIBLE);
+                        iconeCliente.setVisibility(View.INVISIBLE);
+                        //startWebView();
+                        startWebView(location.getLatitude(),location.getLongitude());
+
+                       // startWebView(latitude,longitude);
+
+                    }
                 }
             }
 
@@ -488,6 +706,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             Log.i (TAG,  "Metodo shouldOverrideUrlLoading - MyBrowser inicializado");
+            Log.i (TAG,  "Metodo shouldOverrideUrlLoading - "+url);
             if(url== null){
 
             }
@@ -518,6 +737,31 @@ public class MainActivity extends AppCompatActivity {
                 else
                 {
                     browser.loadUrl("javascript:removePontoMapaNovo(1);pegarEnderecoPelaLaLoMobileNovo("+latitude+","+longitude+");");
+                }
+            }
+
+            boolean enabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+            if ((ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION)
+                    != PackageManager.PERMISSION_GRANTED) ||
+                    !enabled) {
+
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+
+                    browser.evaluateJavascript("javascript:showViewGps();",null);
+                }
+                else
+                {
+                    browser.loadUrl("javascript:showViewGps()");
+                }
+
+            }else{
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+
+                    browser.evaluateJavascript("javascript:showViwEndereco();",null);
+                }
+                else
+                {
+                    browser.loadUrl("javascript:showViwEndereco()");
                 }
             }
 
