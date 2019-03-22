@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jumamotoboy">
+    package="com.mototazlognovo">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name="com.jumamotoboy.SimpleApplication"
+        android:name="com.mototazlognovo.SimpleApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,25 +18,25 @@
         android:theme="@style/AppTheme">
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
 
-        <activity android:name="com.jumamotoboy.MainActivity"
-            android:launchMode="singleInstance">
+        <activity android:name="com.mototazlognovo.MainActivity"
+            android:launchMode="singleInstance" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name="com.jumamotoboy.MyFirebaseInstanceIDService">
+        <service android:name="com.mototazlognovo.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.jumamotoboy.MyFirebaseMessagingService">
+        <service android:name="com.mototazlognovo.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
         <receiver
-            android:name="com.jumamotoboy.BroadcastPostService"
+            android:name="com.mototazlognovo.BroadcastPostService"
             android:enabled="true"
             android:exported="true">
                 <intent-filter>
@@ -44,7 +44,7 @@
                 </intent-filter>
         </receiver>
         <service
-            android:name="com.jumamotoboy.ServicePostNotification"
+            android:name="com.mototazlognovo.ServicePostNotification"
             android:exported="false">
         </service>
     </application>
