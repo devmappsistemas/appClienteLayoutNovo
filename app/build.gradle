@@ -2,15 +2,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 android {
-    namespace 'com.vamosja'
+    namespace 'com.ligmototaxi'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.vamosja"
+        applicationId "com.ligmototaxi"
         minSdk 24
         targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        versionCode 178
+        versionName "14.6"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
